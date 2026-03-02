@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Restablecer contraseña</title>
+    <link rel="stylesheet" href="verificar_usuario.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Verifica tu identidad</h2>
+        <form action="verificar_usuario.php" method="POST">
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni" required>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required>
+
+            <button type="submit">Verificar</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f4f4f4;
+}
+
+header {
+    background: white;
+    padding: 15px;
+    border-bottom: 2px solid #ccc;
+}
+
+h1 {
+    margin: 0 0 10px;
+}
+
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav a.active {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th {
+    background: #75b1c4;
+    padding: 8px;
+    border: 1px solid #aaa;
+}
+
+td {
+    border: 1px solid #aaa;
+    padding: 8px;
+    min-width: 100px;
+}
+
+td[contenteditable] {
+    background: #fff;
+    cursor: text;
+}
+
+form input, form button {
+    padding: 8px;
+    margin: 5px 0;
+}
+.nav {
+    position: relative;
+    background: #e0e0e0;
+    padding: 10px 20px;
+}
+
+.nav a {
+    margin-right: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    position: relative;
+}
+
+.nav-indicator {
+    position: absolute;
+    bottom: 5px;
+    height: 3px;
+    background: black;
+    transition: all 0.3s ease;
+}
+.titulo-box {
+    background: #e0e0e0;
+    width: 300px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 15px;
+    font-size: 28px;
+    border-radius: 10px;
+}
+
+.ausencia-box {
+    background: #e0e0e0;
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.col {
+    width: 45%;
+}
+
+.col label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.col input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.btn.grande {
+    display: block;
+    margin: 40px auto;
+    padding: 15px 50px;
+    font-size: 20px;
+}
+/* ===== FORMULARIO MEJORADO ===== */
+
+form {
+    background: white;
+    width: 600px;
+    max-width: 90%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+form p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="number"],
+form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: all 0.2s ease;
+    font-size: 14px;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #75b1c4;
+    box-shadow: 0 0 0 3px rgba(117,177,196,0.2);
+}
+
+form button {
+    margin-top: 30px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #75b1c4;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+form button:hover {
+    background: #5f99aa;
+    transform: translateY(-2px);
+}
+
+form button:active {
+    transform: translateY(0);
+}
+
+/* ===== HORAS CHECKBOX ===== */
+.horas-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.horas-container label {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 8px 12px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: normal;
+}
+
+.horas-container label:hover {
+    background: #e8f4f8;
+    border-color: #75b1c4;
+}
+
+.horas-container input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.horas-container input[type="checkbox"]:checked {
+    accent-color: #75b1c4;
+}
+
+.horas-container input[type="checkbox"]:checked ~ * {
+    color: #075a7c;
+}
+
+.horas-container label:has(input[type="checkbox"]:checked) {
+    background: #d4e8f0;
+    border-color: #75b1c4;
+    font-weight: 500;
+}

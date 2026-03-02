@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Guardias cpifp bajo aragón</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Guardias cpifp bajo aragón</h1>
+
+        <div class="logo">
+            <div class="icono"></div>
+        </div>
+    </div>
+
+    <div class="login-box">
+        <div class="login-title">Inicio sesión</div>
+
+        <form class="login-form" action="login.php" method="POST">
+            <label for="usuario">DNI:</label>
+            <input type="text" id="usuario" name="dni" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="contrasena" required>
+            <img id="ojo" src="ojoabierto.png" onclick="togglePassword()" width="24px" height="24px">
+
+            <a href="verificar_usuario.html">¿Has olvidado la contraseña?</a>
+
+            <div class="btn-container">
+                <button type="submit" class="btn">Entrar</button>
+            </div>
+        </form>
+
+        <script>
+        function togglePassword() {
+            const passwordField = document.getElementById("password");
+            const eyeIcon = document.getElementById("ojo");
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                eyeIcon.src = "ojoabierto.png";
+            } else {
+                passwordField.type = "password";
+                eyeIcon.src = "ojocerrado.png";
+            }
+        } 
+        </script>
+    </div>
+</div>
+
+</body>
+</html>
